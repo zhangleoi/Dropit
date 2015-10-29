@@ -1,25 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dropit View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DropitViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnN-3S-CCq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gi-Xq-a5P" customClass="BezierPathView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="VgE-nS-PQm" appends="YES" id="km4-iQ-Cjx"/>
+                                            <outletCollection property="gestureRecognizers" destination="E9E-bL-QCD" appends="YES" id="IRR-y6-zvc"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0gi-Xq-a5P" secondAttribute="trailing" id="EwR-8H-0nf"/>
+                                    <constraint firstItem="0gi-Xq-a5P" firstAttribute="top" secondItem="jnN-3S-CCq" secondAttribute="top" id="Z2t-aV-SMo"/>
+                                    <constraint firstItem="0gi-Xq-a5P" firstAttribute="leading" secondItem="jnN-3S-CCq" secondAttribute="leading" id="wRm-XB-6oL"/>
+                                    <constraint firstAttribute="bottom" secondItem="0gi-Xq-a5P" secondAttribute="bottom" id="xB5-Ni-g4Y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jnN-3S-CCq" secondAttribute="trailing" id="H7k-pL-noA"/>
+                            <constraint firstItem="jnN-3S-CCq" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="IcZ-Ml-dBQ"/>
+                            <constraint firstItem="jnN-3S-CCq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jT9-Vq-TSu"/>
+                            <constraint firstItem="jnN-3S-CCq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q3i-bM-ADZ"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="gameView" destination="0gi-Xq-a5P" id="TXz-1w-aKC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VgE-nS-PQm">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="UiH-XL-gd1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="E9E-bL-QCD">
+                    <connections>
+                        <action selector="pan:" destination="BYZ-38-t0r" id="yYo-Aq-14K"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="195.5" y="418.5"/>
         </scene>
     </scenes>
 </document>

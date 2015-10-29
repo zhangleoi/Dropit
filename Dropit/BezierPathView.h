@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BezierPathView.h
 //  Dropit
 //
 //  Created by 张磊 on 15/10/28.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface BezierPathView : UIView
 
-
+@property (strong ,nonatomic) UIBezierPath *path;
 @end
-

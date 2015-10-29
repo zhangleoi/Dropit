@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		48E25E411BE097F400202BAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E25E401BE097F400202BAE /* main.m */; };
 		48E25E441BE097F400202BAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E25E431BE097F400202BAE /* AppDelegate.m */; };
-		48E25E471BE097F400202BAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E25E461BE097F400202BAE /* ViewController.m */; };
 		48E25E4A1BE097F400202BAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E25E481BE097F400202BAE /* Main.storyboard */; };
 		48E25E4C1BE097F400202BAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E25E4B1BE097F400202BAE /* Assets.xcassets */; };
 		48E25E4F1BE097F400202BAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E25E4D1BE097F400202BAE /* LaunchScreen.storyboard */; };
 		48E25E5A1BE097F400202BAE /* DropitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E25E591BE097F400202BAE /* DropitTests.m */; };
 		48E25E651BE097F400202BAE /* DropitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E25E641BE097F400202BAE /* DropitUITests.m */; };
+		48E25E741BE0984400202BAE /* DropitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E25E731BE0984400202BAE /* DropitViewController.m */; };
+		48E25E771BE0A15500202BAE /* DropBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E25E761BE0A15500202BAE /* DropBehavior.m */; };
+		48E25E7A1BE0ACE400202BAE /* BezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E25E791BE0ACE400202BAE /* BezierPathView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		48E25E401BE097F400202BAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		48E25E421BE097F400202BAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		48E25E431BE097F400202BAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		48E25E451BE097F400202BAE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		48E25E461BE097F400202BAE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		48E25E491BE097F400202BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48E25E4B1BE097F400202BAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48E25E4E1BE097F400202BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,12 @@
 		48E25E601BE097F400202BAE /* DropitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E25E641BE097F400202BAE /* DropitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropitUITests.m; sourceTree = "<group>"; };
 		48E25E661BE097F400202BAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48E25E721BE0984400202BAE /* DropitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropitViewController.h; sourceTree = "<group>"; };
+		48E25E731BE0984400202BAE /* DropitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropitViewController.m; sourceTree = "<group>"; };
+		48E25E751BE0A15500202BAE /* DropBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBehavior.h; sourceTree = "<group>"; };
+		48E25E761BE0A15500202BAE /* DropBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBehavior.m; sourceTree = "<group>"; };
+		48E25E781BE0ACE400202BAE /* BezierPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathView.h; sourceTree = "<group>"; };
+		48E25E791BE0ACE400202BAE /* BezierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +109,17 @@
 			children = (
 				48E25E421BE097F400202BAE /* AppDelegate.h */,
 				48E25E431BE097F400202BAE /* AppDelegate.m */,
-				48E25E451BE097F400202BAE /* ViewController.h */,
-				48E25E461BE097F400202BAE /* ViewController.m */,
+				48E25E751BE0A15500202BAE /* DropBehavior.h */,
+				48E25E761BE0A15500202BAE /* DropBehavior.m */,
+				48E25E721BE0984400202BAE /* DropitViewController.h */,
+				48E25E731BE0984400202BAE /* DropitViewController.m */,
 				48E25E481BE097F400202BAE /* Main.storyboard */,
 				48E25E4B1BE097F400202BAE /* Assets.xcassets */,
 				48E25E4D1BE097F400202BAE /* LaunchScreen.storyboard */,
 				48E25E501BE097F400202BAE /* Info.plist */,
 				48E25E3F1BE097F400202BAE /* Supporting Files */,
+				48E25E781BE0ACE400202BAE /* BezierPathView.h */,
+				48E25E791BE0ACE400202BAE /* BezierPathView.m */,
 			);
 			path = Dropit;
 			sourceTree = "<group>";
@@ -270,8 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48E25E471BE097F400202BAE /* ViewController.m in Sources */,
+				48E25E741BE0984400202BAE /* DropitViewController.m in Sources */,
 				48E25E441BE097F400202BAE /* AppDelegate.m in Sources */,
+				48E25E7A1BE0ACE400202BAE /* BezierPathView.m in Sources */,
+				48E25E771BE0A15500202BAE /* DropBehavior.m in Sources */,
 				48E25E411BE097F400202BAE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
